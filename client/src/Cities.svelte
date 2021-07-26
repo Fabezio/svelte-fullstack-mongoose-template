@@ -1,29 +1,26 @@
 <script>
     import { onMount } from "svelte";
-    import addSpace from "./middlewares/addspaces";
-
+    import { city, nom, codePostal } from "./store/city";
     import axios from "axios";
 
-    import * as yup from "yup";
-
-    import WorkersForm from "./UXI/WorkersForm.svelte";
+    import CitiesForm from "./UXI/CitiesForm.svelte";
     import Card from "./UXI/Card.svelte";
 
-    const url = "http://localhost:3000/api/workers";
+    const url = "http://localhost:3000/api/cities";
     let list = [];
 
     let showList = true;
 
-    async function fetchEmployees() {
+    async function fetchCities() {
         const { data } = await axios.get(url);
         list = data;
     }
 
     onMount(() => {
-        fetchEmployees();
+        fetchCities();
     });
 
-    async function removeWorker(id) {
+    async function removeCity(id) {
         const response = await axios.delete(`${url}/${id}`);
         if (response.data.id === id) {
             list = list.filter((t) => t.id !== id);
@@ -34,25 +31,26 @@
 <div class="container">
     <h2 id="workers" class="title">Employés</h2>
     <button class="is-primary" on:click={() => (showList = !showList)}
-        >Ajouter Employé</button
+        >Ajouter Ville</button
     >
     {#if showList}
-        <div class="subtitle">Employees list</div>
-        {#each list as { nom, prenom, phone, email, _id }}
-            <Card {nom} {prenom} {phone} {email} />
-            <!-- <div class="notification is-info">
-                {prenom}
-                {nom};
-                <i class="fas fa-phone" />
+        <div class="subtitle">Liste de villes</div>
+        {#each list as { nom, codePostal, _id }}
+            <!-- <Card {nom} {prenom} {phone} {email} /> -->
+            <div class="notification is-info">
+                <!-- {prenom} -->
+                <div>{nom}</div>
+                <div>{codePostal}</div>
+                <!-- <i class="fas fa-phone" />
                 {addSpace(phone)};
                 <i class="far fa-envelope" />
-                {email}
+                {email} -->
 
-                <div class="delete" on:click={removeWorker(_id)} />
-            </div> -->
+                <div class="delete" on:click={removeCity(_id)} />
+            </div>
         {/each}
     {:else}
-        <WorkersForm />
+        <CitiesForm />
     {/if}
 
     <hr />

@@ -23,7 +23,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/runtime@^7.10.5":
+"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.5":
   version "7.14.8"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.8.tgz#7119a56f421018852694290b9f9148097391b446"
   integrity sha512-twj3L8Og5SaCRCErB4x4ajbvBIVV77CGeFglHpeg5WC5FF8TZzBWXtTJ4MqaD9QszLYTtr+IsaAL2rEUevb+eg==
@@ -259,6 +259,13 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
+final-form@^4.20.2:
+  version "4.20.2"
+  resolved "https://registry.yarnpkg.com/final-form/-/final-form-4.20.2.tgz#c820b37d7ebb73d71169480256a36c7e6e6c9155"
+  integrity sha512-5i0IxqwjjPG1nUNCjWhqPCvQJJ2R+QwTwaAnjPmFnLbyjIHWuBPU8u+Ps4G3TcX2Sjno+O5xCZJzYcMJEzzfCQ==
+  dependencies:
+    "@babel/runtime" "^7.10.0"
+
 follow-redirects@^1.10.0:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.1.tgz#d9114ded0a1cfdd334e164e6662ad02bfd91ff43"
@@ -420,7 +427,7 @@ lodash-es@^4.17.15:
   resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
   integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
-lodash@^4.17.20:
+lodash@^4.17.20, lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -658,12 +665,27 @@ supports-color@^7.0.0:
   dependencies:
     has-flag "^4.0.0"
 
+svelte-final-form@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/svelte-final-form/-/svelte-final-form-1.2.3.tgz#cd7db3f18f2d5cd31fb3abf93b1b70ce9f1e6c3a"
+  integrity sha512-fWY5TmB8KcCwZg3/zbFtB+7uHO8YnEDzo5XGtMA/lJXYnfiAD8SuTdNsDOqW2k7MiO7GMq72rUvjhR7smtTjhg==
+
 svelte-forms-lib@^1.10.3:
   version "1.10.3"
   resolved "https://registry.yarnpkg.com/svelte-forms-lib/-/svelte-forms-lib-1.10.3.tgz#2beb36913829e687ff7e22aa02d43af8a278fd42"
   integrity sha512-H4hW86tpt3ltzIdZgx8V1KY7QG1WhdB5qAbJKwkDS6M8ucSEo4iATMTi/9P0HlwLtXUBubCkySkegKVfb+wS6g==
   dependencies:
     dequal "^2.0.2"
+
+svelte-select@^4.2.7:
+  version "4.2.7"
+  resolved "https://registry.yarnpkg.com/svelte-select/-/svelte-select-4.2.7.tgz#48aa368971211bdc5c742cb4930045919ff871b2"
+  integrity sha512-mGF7HZcCWDmZOfJTBgnacCZ8cAYCRlQNu4/CNEX5juhlJuCI/ncYYs8O4jnYPnU/Qc7l07y+bpi7TF9SF9eRgQ==
+
+svelte-use-form@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/svelte-use-form/-/svelte-use-form-2.4.1.tgz#c6625031f41d3361a161312f936a6352d2d42a19"
+  integrity sha512-DDQTl82W+jDtt3cWdw8z1YKdwoO3l4FIeYUDL5p8OEEen03a57enP0IfG3xpApAyzTbhnb5PeQ01oR8JDHS99w==
 
 svelte@^3.38.3:
   version "3.38.3"
