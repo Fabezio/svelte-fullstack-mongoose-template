@@ -4,8 +4,6 @@
 
     import axios from "axios";
 
-    import * as yup from "yup";
-
     import WorkersForm from "./UXI/WorkersForm.svelte";
     import Card from "./UXI/Card.svelte";
 
