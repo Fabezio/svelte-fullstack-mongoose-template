@@ -32,16 +32,15 @@
 
 <!-- <Route path="workers" /> -->
 
-<div class="container">
-    <h2 id="workers" class="title">Employés</h2>
-    <button class="is-primary" on:click={() => (showList = !showList)}
-        >Ajouter Employé</button
-    >
-    {#if showList}
-        <div class="subtitle">Employees list</div>
-        {#each list as { nom, prenom, phone, email, _id }}
-            <Card {nom} {prenom} {phone} {email} />
-            <!-- <div class="notification is-info">
+<h2 id="workers" class="title">Employés</h2>
+<button class="is-primary" on:click={() => (showList = !showList)}
+    >Ajouter Employé</button
+>
+{#if showList}
+    <div class="subtitle">Employees list</div>
+    {#each list as { nom, prenom, phone, email, _id }}
+        <Card {nom} {prenom} {phone} {email} />
+        <!-- <div class="notification is-info">
                 {prenom}
                 {nom};
                 <i class="fas fa-phone" />
@@ -51,16 +50,15 @@
 
                 <div class="delete" on:click={removeWorker(_id)} />
             </div> -->
-        {/each}
-    {:else}
-        <WorkersForm />
-    {/if}
+    {/each}
+{:else}
+    <WorkersForm />
+{/if}
 
-    <hr />
-    <!-- {#each thisForm as { nom, prenom, phone, email }}
+<hr />
+<!-- {#each thisForm as { nom, prenom, phone, email }}
         {nom}
         {prenom}
         {phone}
         {email}
     {/each} -->
-</div>
