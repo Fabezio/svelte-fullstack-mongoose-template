@@ -1,10 +1,12 @@
 <script>
     import { onMount } from "svelte";
-    import { city, nom, codePostal } from "./store/city";
+    import { city, nom, codePostal } from "../store/city";
+    // import { Router, Route, Link } from "svelte-navigator";
+
     import axios from "axios";
 
-    import CitiesForm from "./UXI/CitiesForm.svelte";
-    import Card from "./UXI/Card.svelte";
+    import CitiesForm from "../UXI/CitiesForm.svelte";
+    // import Card from "../UXI/Card.svelte";
 
     const url = "http://localhost:3000/api/cities";
     let list = [];
@@ -28,8 +30,9 @@
     }
 </script>
 
+<!-- <Route path="cities" /> -->
 <div class="container">
-    <h2 id="workers" class="title">Employés</h2>
+    <h2 id="workers" class="title">Villes</h2>
     <button class="is-primary" on:click={() => (showList = !showList)}
         >Ajouter Ville</button
     >

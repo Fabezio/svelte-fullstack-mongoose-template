@@ -1,6 +1,13 @@
 <script>
     import axios from "axios";
-    import { nom, prenom, email, phone, worker } from "../store/worker";
+    import {
+        nom,
+        prenom,
+        email,
+        phone,
+        worker,
+        workers,
+    } from "../store/worker";
     import Input from "./Input.svelte";
     // import { url } from "../store/db";
     const url = "http://localhost:3000/api/workers/add";
@@ -14,7 +21,8 @@
             phone: $phone,
             email: $email.value,
         };
-        axios.post(url, $worker);
+        const response = axios.post(url, $worker);
+        $workers = [...$workers, response.data];
     }
 
     // $: if ($worker.email.value) console.log($worker.email.value);

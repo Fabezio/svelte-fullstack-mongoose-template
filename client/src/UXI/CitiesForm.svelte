@@ -1,18 +1,21 @@
 <script>
     import axios from "axios";
-    import { city, nom, codePostal } from "../store/city";
+    import { cities, city, nom, codePostal } from "../store/city";
     import Input from "./Input.svelte";
     // import { url } from "../store/db";
     const url = "http://localhost:3000/api/cities/add";
     let full = false;
-    function submit(e) {
+    // let $cities = [];
+    async function submit(e) {
         full = true;
+
         e.preventDefault();
         $city = {
             nom: $nom,
             codePostal: $codePostal,
         };
-        axios.post(url, $city);
+        const response = axios.post(url, $city);
+        $cities = [response.data, ...$cities];
     }
 </script>
 

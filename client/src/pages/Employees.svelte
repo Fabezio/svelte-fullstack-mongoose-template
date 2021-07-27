@@ -1,11 +1,12 @@
 <script>
     import { onMount } from "svelte";
-    import addSpace from "./middlewares/addspaces";
+    // import { Router, Route, Link } from "svelte-navigator";
+    // import addSpace from "./middlewares/addspaces";
 
     import axios from "axios";
 
-    import WorkersForm from "./UXI/WorkersForm.svelte";
-    import Card from "./UXI/Card.svelte";
+    import WorkersForm from "../UXI/WorkersForm.svelte";
+    import Card from "../UXI/Card.svelte";
 
     const url = "http://localhost:3000/api/workers";
     let list = [];
@@ -28,6 +29,8 @@
         }
     }
 </script>
+
+<!-- <Route path="workers" /> -->
 
 <div class="container">
     <h2 id="workers" class="title">Employés</h2>
